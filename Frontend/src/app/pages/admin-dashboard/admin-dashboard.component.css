@@ -1,0 +1,38 @@
+.admin-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Adjust alignment to stretch */
+  align-items: center;
+  justify-self: center;
+}
+
+.dashboard-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Make the navigation bar take the full width */
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.dashboard-nav button {
+  flex: 1; /* Make the buttons take equal width within the navbar */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px; /* Add some spacing between buttons */
+}
+
+.dashboard-nav button:first-child {
+  margin-left: 0; /* Remove left margin from the first button */
+}
+
+.dashboard-nav button:last-child {
+  margin-right: 0; /* Remove right margin from the last button */
+}
+
+.dashboard-nav button:hover {
+  background-color: #0056b3;
+}

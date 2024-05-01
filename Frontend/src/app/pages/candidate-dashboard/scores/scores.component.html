@@ -1,0 +1,20 @@
+<div class="scores-container">
+    <h1>Your Scores</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Score</th>
+          <th>Topic</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let score of scores">
+          <td>{{ score.date }}</td>
+          <td>{{ score.scores }}</td>
+          <td>{{ score.position }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

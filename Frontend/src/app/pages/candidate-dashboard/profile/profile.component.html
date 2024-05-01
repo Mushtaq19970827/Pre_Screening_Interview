@@ -1,0 +1,27 @@
+<div class="main-container">
+<div class="profile-container">
+    <h1>Profile</h1>
+    <div *ngIf="!editing">
+      <p><strong>First Name:</strong> {{ user.email }}</p>
+      <p><strong>Last Name:</strong> {{ user.lastName }}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <button (click)="toggleEdit()">Edit Profile</button>
+    </div>
+  
+    <div *ngIf="editing">
+      <form>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" [(ngModel)]="user.firstName" type="text">
+  
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" [(ngModel)]="user.lastName" type="text">
+  
+        <label for="email">Email:</label>
+        <input id="email" [(ngModel)]="user.email" type="email">
+  
+        <button type="button" (click)="saveProfile()">Save</button>
+        <button type="button" (click)="toggleEdit()">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>

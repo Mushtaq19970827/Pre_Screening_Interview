@@ -1,0 +1,101 @@
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1400px;
+  }
+  
+  /* Left side (formerly login container) styles */
+  .signup-container {
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .right-side {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    color: #3a3a3a;
+  }
+  
+  .benefits-list {
+    list-style-type: none; /* Remove default list style */
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  .benefits-list li {
+    margin-bottom: 10px;
+    line-height: 1.5; /* Increase line height for better spacing */
+  }
+  
+  .tick {
+    color: #007bff; /* Green color for tick */
+    margin-right: 5px; /* Add some space between tick and text */
+  }
+  
+  
+  /* Additional styling for the right side */
+  .right-side h2 {
+    color: #0056b3;  /* Blue heading color */
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Change button background color */
+    color: #fff; /* Change button text color to white */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darken button background on hover */
+  }
+
+  .account-link {
+    font-size: 0.8em;
+    margin-top: 10px; 
+    text-align: center; 
+    display: block;
+  }
+  
+  .account-link a {
+    color: #007bff; 
+    text-decoration: none; 
+  }
+  
+  .account-link a:hover {
+    text-decoration: underline; 
+  }
+  

@@ -1,0 +1,13 @@
+<div class="dashboard-container">
+    <nav class="dashboard-nav">
+        <button (click)="navigate('assigned-interviews')">Assigned Interviews</button>
+        <button (click)="navigate('interview')">Go to Demo</button>
+        <button (click)="navigate('scores')">Check Scores</button>
+        <button (click)="navigate('profile')">Profile</button>
+        <button (click)="logout('login')">Logout</button>
+    </nav>
+    <section class="content">
+        <!-- This will be filled based on the routing -->
+        <router-outlet></router-outlet>
+    </section>
+</div>

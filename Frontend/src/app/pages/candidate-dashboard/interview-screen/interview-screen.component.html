@@ -1,0 +1,40 @@
+<div class="interview-screen-container">
+  <!-- Video Area (Left Side) -->
+  <div class="video-area">
+    <!-- Placeholder for video element -->
+    <!-- You can add your video streaming component here -->
+    <div class="placeholder-video">Video Placeholder</div>
+    <!-- Button to toggle video -->
+    <button class="video-control-button" (click)="toggleVideo()">
+      {{ videoEnabled ? 'Turn Off Video' : 'Turn On Video' }}
+    </button>
+  </div>
+
+  <!-- Chat Area (Right Side) -->
+  <div class="chat-area">
+    <!-- Chat Messages -->
+    <button class="start-interview-button" (click)="callInitialResponse()">Start Interview</button>
+    <button class="start-interview-button" (click)="calculateScore()">End Interview</button>
+    <!-- <div class="chat-messages">
+      <div class="message received">Hi, how are you?</div>
+      <div class="message sent">I'm doing well, thank you!</div>
+    </div>
+
+    <div class="input-container">
+      <input type="text" placeholder="Type your message...">
+      <button>Send</button>
+    </div> -->
+    <div class="chat-container">
+      <div class="chat-messages">
+        <!-- Messages will be displayed here -->
+        <div *ngFor="let message of messages" class="message" [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+          <p>{{ message.text }}</p>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message here">
+        <button (click)="sendMessage($event)">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

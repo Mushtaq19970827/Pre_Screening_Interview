@@ -1,0 +1,32 @@
+<div class="main-container">
+<div class="filter-top-candidates-container">
+  <h2>Filter Top Candidates</h2>
+  <input type="file" multiple (change)="uploadCVs($event)">
+  <input type="file" (change)="uploadRequirement($event)">
+  <label for="jobType">Select Job Type:</label>
+  <select id="jobType" [(ngModel)]="selectedRole">
+    <option *ngFor="let jobType of jobTypes" [value]="jobType">{{ jobType }}</option>
+  </select>
+  <button (click)="analyzeCandidates()">Analyze Candidates</button>
+  <p *ngIf="candidates.length === 0">No candidates uploaded yet.</p>
+
+  <table *ngIf="candidates.length > 0">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Experience (Years)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let candidate of candidates">
+        <td>{{ candidate.name }}</td>
+        <td>{{ candidate.email }}</td>
+        <td>{{ candidate.experience }}</td>
+        <td><button (click)="assignInterview(candidate)">Assign Interview</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

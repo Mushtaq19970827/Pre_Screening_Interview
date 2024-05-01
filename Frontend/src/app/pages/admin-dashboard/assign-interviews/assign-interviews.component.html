@@ -1,0 +1,15 @@
+<div class="main-container">
+<div class="assign-interview-container">
+  <h2>Assign Interview</h2>
+  <label for="candidateName">Candidate Name:</label>
+  <input type="text" id="candidateName" #candidateName required>
+
+  <label for="interviewDate">Interview Date:</label>
+  <input type="date" id="interviewDate" #interviewDate required>
+
+  <label for="position">Position:</label>
+  <input type="text" id="position" #selectedPosition required>
+
+  <button type="button" (click)="assignInterview(candidateName.value, interviewDate.value, selectedPosition.value)">Assign Interview</button>
+</div>
+</div>

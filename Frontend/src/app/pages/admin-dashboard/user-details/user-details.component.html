@@ -1,0 +1,27 @@
+<div class="main-container">
+<div class="user-details-container">
+    <h2>User Details</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{ user._id }}</td>
+          <td>{{ user.firstName }}</td>
+          <td>{{ user.lastName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.isAdmin ? "Admin":"Candidate" }}</td>
+          <td><button (click)="deleteUser(user._id)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </div>

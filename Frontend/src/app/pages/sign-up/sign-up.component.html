@@ -1,0 +1,42 @@
+<div class="body-container">
+    <div class="container">
+      <div class="signup-container">
+        <h2>Welcome to AI Interviewer</h2>
+        <p>Ready to ace your next interview?</p>
+        <p>Discover how AI Interviewer can empower you:</p>
+        <ul class="benefits-list">
+          <li><span class="tick">✔</span> Receive tailored interview questions based on your skills and experience.</li>
+          <li><span class="tick">✔</span> Get instant feedback and insights into your performance.</li>
+          <li><span class="tick">✔</span> Access your interview scores and track your progress over time.</li>
+          <li><span class="tick">✔</span> Enjoy a user-friendly dashboard designed for your convenience.</li>
+        </ul>
+      </div>
+      <div class="right-side">
+        <h2>Sign Up</h2>
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="lastName" required>
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" [(ngModel)]="username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password" required>
+          </div>
+          <button type="submit">Sign Up</button>
+          <p class="account-link">Already have an account? <a href="/login">Log in here</a></p>
+        </form>
+      </div>
+    </div>
+  </div>

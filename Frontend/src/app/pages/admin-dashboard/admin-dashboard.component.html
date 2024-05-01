@@ -1,0 +1,16 @@
+<div class="body-container">
+    <div class="admin-dashboard-container">
+        <nav class="dashboard-nav">
+            <button (click)="navigate('user-details')">User Details</button>
+            <button (click)="navigate('assign-interviews')">Assign Interviews</button>
+            <button (click)="navigate('interview')">Interviews</button>
+            <button (click)="navigate('filter-top-candidates')">Filter Top Candidates</button>
+            <button (click)="logout('login')">Logout</button>
+            <!-- <button (click)="navigate('profile')">Profile</button> -->
+        </nav>
+        <section class="content">
+            <!-- This will be filled based on the routing -->
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+</div>

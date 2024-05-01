@@ -1,0 +1,23 @@
+<div class="main-container">
+  <h2>Interviews</h2>
+<table>
+    <thead>
+      <tr>
+        <th>Candidate Email</th>
+        <th>Interview Date</th>
+        <th>position</th>
+        <th>Attended</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let interview of interviews">
+        <td>{{ interview.userEmail }}</td>
+        <td>{{ interview.interviewDate.$date }}</td>
+        <td>{{ interview.position || '-' }}</td>
+        <td>{{ interview.status =="closed"?"Yes":"No"}}</td>
+        <td>{{ interview.score || '-' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

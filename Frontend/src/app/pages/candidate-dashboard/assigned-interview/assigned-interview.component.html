@@ -1,0 +1,14 @@
+<div class="main-container">
+<div class="assigned-interviews-container">
+    <h2>Assigned Interviews</h2>
+    <ul>
+      <li *ngFor="let interview of assignedInterviews">
+        <h3>{{ interview.position }}</h3>
+        <p><strong>Date:</strong> {{ interview.interviewDate.$date }}</p>
+        <p><strong>Score:</strong> {{ interview.score }}</p>
+        <button (click)="startInterview(interview)">Start Interview</button>
+      </li>
+      <li *ngIf="assignedInterviews.length === 0">No assigned interviews.</li>
+    </ul>
+  </div>
+</div>
